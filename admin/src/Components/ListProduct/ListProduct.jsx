@@ -7,7 +7,7 @@ const ListProduct = () => {
 
   const fetchInfo = async () => {
     try {
-      const res = await fetch("http://localhost:4000/allproducts");
+      const res = await fetch("https://shopify02-satyendra-kumars-projects.vercel.app/allproducts");
       const data = await res.json();
       setAllProducts(data);
     } catch (error) {
@@ -21,7 +21,7 @@ const ListProduct = () => {
 
   const remove_product = async (id) => {
     try {
-      await fetch('http://localhost:4000/removeproduct', {
+      await fetch('https://shopify02-satyendra-kumars-projects.vercel.app/removeproduct', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
